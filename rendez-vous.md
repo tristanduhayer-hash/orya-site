@@ -16,10 +16,7 @@ Un premier échange de 30 minutes environ, en agence ou en visio, pour comprendr
 - **E-mail** : [{{ site.email }}](mailto:{{ site.email }})
 
 ## Nos agences
-| Agence | Adresse |
-|---|---|
-| Troyes (siège) | 8 rue Voltaire, 10000 Troyes |
-| Colmar | Adresse à compléter |
+<table><tr><th>Agence</th><th>Adresse</th></tr><tr><td>Troyes (siège)</td><td>8 rue Voltaire, 10000 Troyes</td></tr><tr><td>Colmar</td><td>Adresse à compléter</td></tr></table>
 
 Nous accompagnons aussi nos clients **à distance**, partout en France et dans les DOM-TOM.
 </div>
