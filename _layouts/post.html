@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="article etroit">
+  <p class="meta">{{ page.date | date: "%d/%m/%Y" }}{% if page.theme %} · {{ page.theme }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.chapo %}<p class="chapo">{{ page.chapo }}</p>{% endif %}
+  {{ content }}
+  {% include cta.html %}
+  <p class="avertissement">Information générale, à jour à la date de publication ; elle ne constitue pas un conseil personnalisé. Toute solution dépend de votre situation, de vos objectifs et de votre profil de risque, étudiés lors d'un entretien.</p>
+</article>

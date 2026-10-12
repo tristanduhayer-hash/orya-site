@@ -1,0 +1,17 @@
+---
+title: Articles
+description: "Épargne, retraite, immobilier, fiscalité, transmission : les articles d'ORYA pour mieux comprendre votre patrimoine."
+---
+<h1 class="titre-section" style="margin-top:24px">Nos articles</h1>
+<div class="filet"></div>
+<p class="sous-titre">Épargne, retraite, immobilier, fiscalité, transmission : des explications simples pour mieux décider.</p>
+{% if site.posts.size > 0 %}
+<ul class="liste-articles etroit">
+  {% for post in site.posts %}
+  <li><span class="meta">{{ post.date | date: "%d/%m/%Y" }}{% if post.theme %} · {{ post.theme }}{% endif %}</span><br><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.chapo %}<p>{{ post.chapo }}</p>{% endif %}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="vide">Les premiers articles arrivent bientôt.</p>
+{% endif %}
+<div class="etroit">{% include cta.html %}</div>

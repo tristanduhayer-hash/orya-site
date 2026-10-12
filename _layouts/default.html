@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.test %}<meta name="robots" content="noindex, nofollow">{% elsif page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+  {% seo %}
+  {% feed_meta %}
+  <link rel="icon" type="image/png" href="{{ '/assets/sceau.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=1">
+</head>
+<body>
+  {% if site.test %}<div class="bandeau-test">Site en préparation : version de test, non publique.</div>{% endif %}
+  <header class="entete">
+    <div class="conteneur entete-in">
+      <a href="{{ '/' | relative_url }}" class="marque"><img src="{{ '/assets/logo_blanc.png' | relative_url }}" alt="ORYA gestion de patrimoine" width="140" height="60"></a>
+      <nav>
+        <a href="{{ '/expertises/' | relative_url }}">Expertises</a>
+        <a href="{{ '/qui-sommes-nous/' | relative_url }}">Qui sommes-nous</a>
+        <a href="{{ '/blog/' | relative_url }}">Articles</a>
+        <a href="{{ '/rendez-vous/' | relative_url }}" class="bouton clair petit">Prendre rendez-vous</a>
+      </nav>
+    </div>
+  </header>
+  <main class="conteneur">
+    {{ content }}
+  </main>
+  <footer class="pied">
+    <div class="conteneur pied-in">
+      <div>
+        <img src="{{ '/assets/logo_blanc.png' | relative_url }}" alt="ORYA gestion de patrimoine" width="150" height="64">
+        <p>ORYA Assurance et Patrimoine · Troyes, Colmar et à distance, partout en France (DOM-TOM compris).</p>
+      </div>
+      <div>
+        <p><a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p class="pied-liens">
+          <a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a>
+          <a href="{{ '/confidentialite/' | relative_url }}">Confidentialité</a>
+          {% if site.linkedin != "" %}<a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}
+          {% if site.facebook != "" %}<a href="{{ site.facebook }}">Facebook</a>{% endif %}
+        </p>
+      </div>
+    </div>
+    <div class="conteneur"><p class="pied-legal">Intermédiaire immatriculé à l'ORIAS sous le n° 21005938 (www.orias.fr). Les informations de ce site sont générales et ne constituent pas un conseil personnalisé. Tout placement comporte des risques, dont un risque de perte en capital ; les performances passées ne préjugent pas des performances futures.</p></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+title: ORYA Gestion de patrimoine
+description: "Bilan patrimonial, épargne et retraite, investissement immobilier, transmission, protection de la famille : ORYA vous accompagne à Troyes, à Colmar et à distance partout en France."
+url: "https://orya-patrimoine.com"
+baseurl: ""
+lang: fr_FR
+timezone: Europe/Paris
+permalink: /blog/:title/
+
+# Site de test : tant que test vaut true, aucune page n'est référencée (balise noindex + robots.txt).
+# À passer à false uniquement lors de la bascule sur orya-patrimoine.fr, validée par Tristan.
+test: true
+
+# Coordonnées ORYA
+telephone: "06 73 89 50 86"
+telephone_lien: "+33673895086"
+email: "tristan@orya-patrimoine.fr"
+# Lien de prise de rendez-vous général (Calendly ou autre). Vide = la page /rendez-vous/ affiche téléphone et e-mail.
+rdv: ""
+facebook: ""
+linkedin: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude: [README.md, Gemfile, Gemfile.lock]
